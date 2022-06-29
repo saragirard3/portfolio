@@ -168,9 +168,6 @@ section{
   }
 }
 
-//Responsive design
-@import 'media';
-
 //Header
 .header-content{
   display: grid;
@@ -245,12 +242,7 @@ section{
   grid-gap: 2rem;
   .toolbox-item{
     position: relative;
-    padding-left: 2rem;
     border-left: 3px solid var(--color-grey-dark);
-  }
-  .last-row{
-    padding-right: 2rem;
-    border-right: 3px solid var(--color-grey-dark);
   }
 }
 
@@ -311,18 +303,18 @@ section{
     p{
       color: var(--color-grey-light);
     }
-  ;
-  }
-}
-
-.job-desc{
-  font-size: 1rem;
-  ul {
-    padding: 0 1rem;
-    li {
-      display: list-item;
-      list-style-type: circle;
+    .job-desc{
+      color: var(--color-grey-light);
+      font-size: 1rem;
+      ul {
+        padding: .2rem .6rem;
+        li {
+          display: list-item;
+          list-style-type: circle;
+        }
+      }
     }
+  ;
   }
 }
 
@@ -399,3 +391,7 @@ section{
   opacity: 1;
   transform: scale(1);
 }
+
+
+//Responsive design
+@import 'media';
