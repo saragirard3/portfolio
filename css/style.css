@@ -10,13 +10,9 @@
   --color-secondary: #F2A07B;
   --color-light: #fff5ec;
   --color-black: #000;
-  --color-grey: #f8f8f8;
-  --color-grey-1: #dbe1e8;
-  --color-grey-2: #6c7983;
-  --color-grey-3: #454e56;
-  --color-grey-4: #2a2e35;
-  --color-grey-5: #2a2e35;
-  --color-grey-6: #12181b;
+  --color-grey-light: #6c7983;
+  --color-grey-med: #454e56;
+  --color-grey-dark: #2a2e35;
   --br-sm-02: 14px;
   --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
   --transition: all .2s ease-in-out;
@@ -27,13 +23,9 @@
   --color-secondary: #DD4A48;
   --color-light: #FFEEAD;
   --color-black: #000;
-  --color-grey: #f8f8f8;
-  --color-grey-1: #dbe1e8;
-  --color-grey-2: #6c7983;
-  --color-grey-3: #454e56;
-  --color-grey-4: #2a2e35;
-  --color-grey-5: #f8f8f8;
-  --color-grey-6: #12181b;
+  --color-grey-light: #6c7983;
+  --color-grey-med: #454e56;
+  --color-grey-dark: #f8f8f8;
 }
 
 body {
@@ -111,7 +103,7 @@ section {
 .controls .control {
   padding: 1rem;
   cursor: pointer;
-  background-color: var(--color-grey-4);
+  background-color: var(--color-grey-dark);
   width: 40px;
   height: 45px;
   border-radius: 20%;
@@ -123,7 +115,7 @@ section {
 }
 .controls .control i {
   font-size: 1.2rem;
-  color: var(--color-grey-2);
+  color: var(--color-grey-light);
   pointer-events: none;
 }
 
@@ -133,7 +125,7 @@ section {
   width: 23px;
   height: 23px;
   border-radius: 15%;
-  background-color: var(--color-grey-3);
+  background-color: var(--color-grey-med);
   cursor: pointer;
   position: fixed;
   display: flex;
@@ -147,7 +139,7 @@ section {
 }
 .theme-btn i {
   font-size: 0.75rem;
-  color: var(grey-2);
+  color: var(grey-light);
   pointer-events: none;
 }
 
@@ -164,7 +156,7 @@ section {
   position: absolute;
   top: 50%;
   left: 50%;
-  color: var(--color-grey-5);
+  color: var(--color-grey-dark);
   transition: var(--transition);
   z-index: -1;
   transform: translate(-50%, -50%);
@@ -224,39 +216,53 @@ section {
   text-transform: uppercase;
   font-size: 1.4rem;
   text-align: center;
-  padding: 3.5rem 0;
+  padding: 3rem 0;
   position: relative;
 }
 .resume-title::before {
   content: "";
   position: absolute;
   left: 50%;
-  top: 0;
+  top: 1rem;
   width: 40%;
   height: 1px;
-  background-color: var(--color-grey-5);
+  background-color: var(--color-grey-dark);
   transform: translateX(-50%);
+}
+
+.toolbox {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 2rem;
+}
+.toolbox .toolbox-item {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 3px solid var(--color-grey-dark);
+}
+.toolbox .last-row {
+  padding-right: 2rem;
+  border-right: 3px solid var(--color-grey-dark);
 }
 
 .timeline {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
-  padding-top: 3rem;
 }
 .timeline .timeline-item {
   position: relative;
   padding-left: 3rem;
-  border-left: 1px solid var(--color-grey-5);
+  border-left: 1px solid var(--color-grey-dark);
 }
 .timeline .timeline-item .tl-icon {
   position: absolute;
   left: -27px;
   top: 0;
   background-color: var(--color-secondary);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 20%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -264,9 +270,19 @@ section {
 .timeline .timeline-item .tl-icon i {
   font-size: 1.3rem;
 }
+.timeline .timeline-item .tl-tools {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.timeline .timeline-item .tl-tools .tl-item {
+  font-size: 15px;
+  font-weight: bold;
+  position: relative;
+  padding-left: 1rem;
+}
 .timeline .timeline-item .tl-duration {
   padding: 0.2rem 0.6rem;
-  background-color: var(--color-grey-5);
+  background-color: var(--color-grey-dark);
   border-radius: 15px;
   display: inline-block;
   font-size: 0.8rem;
@@ -274,18 +290,18 @@ section {
   font-weight: 500;
 }
 .timeline .timeline-item h5 {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   text-transform: uppercase;
   font-size: 1.3rem;
   font-weight: 600;
 }
 .timeline .timeline-item h5 span {
-  color: var(--color-grey-2);
+  color: var(--color-grey-light);
   font-weight: 500;
   font-size: 1.2rem;
 }
 .timeline .timeline-item p {
-  color: var(--color-grey-2);
+  color: var(--color-grey-light);
 }
 
 .job-desc {
